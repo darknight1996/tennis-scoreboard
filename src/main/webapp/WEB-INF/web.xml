@@ -4,4 +4,15 @@
 
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>new-match</servlet-name>
+        <jsp-file>/new-match.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>new-match</servlet-name>
+        <url-pattern>/new-match</url-pattern>
+    </servlet-mapping>
+
 </web-app>
