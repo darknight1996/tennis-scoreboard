@@ -12,16 +12,24 @@
 <body>
 <h1>New Match</h1>
 <div class="container">
-    <form>
+    <form action="${pageContext.request.contextPath}/new-match" method="post">
+        <p>
+            <%
+                if (null != request.getAttribute("errorMessage"))
+                {
+                    out.println(request.getAttribute("errorMessage"));
+                }
+            %>
+        </p>
         <p>
             <label>
-                <p>First Player</p>
+                First Player
                 <input type="text" name="firstPlayerName">
             </label>
         </p>
         <p>
             <label>
-                <p>Second Player</p>
+                Second Player
                 <input type="text" name="secondPlayerName">
             </label>
         </p>
