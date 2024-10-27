@@ -14,14 +14,6 @@
 <div class="container">
     <form action="${pageContext.request.contextPath}/new-match" method="post">
         <p>
-            <%
-                if (null != request.getAttribute("errorMessage"))
-                {
-                    out.println(request.getAttribute("errorMessage"));
-                }
-            %>
-        </p>
-        <p>
             <label>
                 First Player
                 <input type="text" name="firstPlayerName">
