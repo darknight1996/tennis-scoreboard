@@ -5,9 +5,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.example.factory.ObjectFactory;
 import org.example.model.Player;
 import org.example.service.PlayerService;
-import org.example.service.impl.PlayerServiceImpl;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import java.util.Optional;
 @WebServlet("/new-match")
 public class NewMatchServlet extends HttpServlet {
 
-    private final PlayerService playerService = new PlayerServiceImpl();
+    private final PlayerService playerService = ObjectFactory.getPlayerService();
 
     @Override
     protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
